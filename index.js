@@ -15,43 +15,48 @@ const arrayObjectPegawai = require("./data-customer.json");
 
 function lakukanLooping(arrPegawai) {
   // ! JANGAN DIMODIFIKASI
-  let hasilLooping = [];
   let dataYangAkanDilooping = arrPegawai;
-  for (let a = 0; a<dataYangAkanDilooping.length;a++){   
-    let name  = dataYangAkanDilooping[a].namaDepan + " " + dataYangAkanDilooping[a].namaBelakang;
-    
-   // console.log(hasilLooping1);
-    hasilLooping[a] = name;
-    hasilLooping[a+1];
-      /*
-    TODO 1: Buatlah sebuah variabel bernama "hasilLooping" 
+
+  /*
+    TODO 1: "id": 2,
+    "namaDepan": "Duncan",
+    "namaBelakang": "White",
+    "jenisKelamin": "M"Buatlah sebuah variabel bernama "hasilLooping" 
       yang berisi gabungan nama depan dan belakang dari masing masing pegawai
+
       Contoh: ["Aisyah Nirmala", "Mansur Faisal", ...]
-  */}
-   
-  
+  */
+  let hasilLooping = [];
+  for (let i = 0; i < dataYangAkanDilooping.length; i++) {
+    let namaLengkap = dataYangAkanDilooping[i].namaDepan + " " + dataYangAkanDilooping[i].namaBelakang;
+
+    hasilLooping[i] = namaLengkap;
+    hasilLooping[i];
+  }
+
   /*
     TODO 2: Buatlah sebuah variabel bernama "jumlahPria"
       yang berisi jumlah pria dari masing masing pegawai
   */
   let jumlahPria = 0;
-  for (let a = 0; a<dataYangAkanDilooping.length;a++){
-    if(dataYangAkanDilooping[a].jenisKelamin == "M"){
-      jumlahPria = jumlahPria+1;
-      }
+  for (let i = 0; i < dataYangAkanDilooping.length; i++) {
+    if (dataYangAkanDilooping[i].jenisKelamin == 'M') {
+      jumlahPria = jumlahPria + 1;
+    }
   }
+
   /*
     TODO 3: Buatlah sebuah variabel bernama "jumlahWanita"
       yang berisi jumlah wanita dari masing masing pegawai
   */
   let jumlahWanita = 0;
-  for (let a = 0; a<dataYangAkanDilooping.length;a++){
-    if(dataYangAkanDilooping[a].jenisKelamin == "F"){
-      jumlahWanita = jumlahWanita+1;
-      }
+  for (let i = 0; i < dataYangAkanDilooping.length; i++) {
+    if (dataYangAkanDilooping[i].jenisKelamin == 'F') {
+      jumlahWanita = jumlahWanita + 1;
+    }
   }
 
-    /*
+  /*
     TODO 4: Buatlah sebuah variabel bernama "komentar"
       yang akan mengomentari apakah lebih banyak Pria atau Wanita
       
@@ -66,13 +71,12 @@ function lakukanLooping(arrPegawai) {
   if (jumlahPria > jumlahWanita) {
     komentar = "Jumlah Pria lebih banyak dari Wanita"
   }
-  else if (jumlahPria < jumlahWanita) {
+  else if (jumlahWanita > jumlahPria) {
     komentar = "Jumlah Wanita lebih banyak dari Pria"
   }
   else {
     komentar = "Jumlah Pria dan Wanita berimbang"
   }
-  
 
   // ! JANGAN DIMODIFIKASI
   return {
