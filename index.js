@@ -67,14 +67,12 @@ function lakukanLooping(arrPegawai) {
       Apabila imbang, maka komentar akan berisi:
         "Jumlah Pria dan Wanita berimbang"
   */
-  let komentar = "";
-  if (jumlahPria > jumlahWanita) {
+  let komentar = '';
+  if(jumlahPria > jumlahWanita) {
     komentar = "Jumlah Pria lebih banyak dari Wanita"
-  }
-  else if (jumlahWanita > jumlahPria) {
+  }else if(jumlahWanita > jumlahPria) {
     komentar = "Jumlah Wanita lebih banyak dari Pria"
-  }
-  else {
+  }else {
     komentar = "Jumlah Pria dan Wanita berimbang"
   }
 
@@ -93,6 +91,7 @@ function main(data) {
   console.log(hasil.hasilLooping);
   console.log(hasil.jumlahPria);
   console.log(hasil.jumlahWanita);
+  console.log(hasil.komentar);
 
   return hasil;
 }
